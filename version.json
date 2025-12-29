@@ -3,7 +3,7 @@
   "release_date": "2025-01-15",
   "download_url": "https://siwakiri.booth.pm/items/7812303",
   "release_notes": {
-    "ja": "問い合わせ追加。機能拡充。",
-    "en": "Added inquiry function. Other function expansion."
+    "ja": "音量自動復元機能が機能しない場面があったため修正",
+    "en": "Fixed an issue where the automatic volume restoration function did not work."
   }
 }
