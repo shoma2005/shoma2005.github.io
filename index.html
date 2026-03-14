@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S.Iwakiri - Products</title>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#0f0f13;
+      --surface:#1a1a24;
+      --surface-hover:#22223a;
+      --border:#2a2a3d;
+      --text:#e4e4ef;
+      --text-sub:#8888a0;
+      --accent:#6c63ff;
+      --accent-light:#8b83ff;
+    }
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+    }
+
+    /* ── Header ── */
+    header{
+      text-align:center;
+      padding:3.5rem 1.5rem 2rem;
+    }
+    header h1{
+      font-size:1.5rem;
+      font-weight:600;
+      letter-spacing:.04em;
+      color:var(--text);
+    }
+    header p{
+      margin-top:.5rem;
+      color:var(--text-sub);
+      font-size:.9rem;
+    }
+
+    /* ── Product Grid ── */
+    .products{
+      max-width:720px;
+      width:100%;
+      margin:0 auto;
+      padding:0 1.5rem 3rem;
+      display:flex;
+      flex-direction:column;
+      gap:1rem;
+    }
+    .product-card{
+      display:flex;
+      align-items:center;
+      gap:1.25rem;
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:1.25rem 1.5rem;
+      text-decoration:none;
+      color:inherit;
+      transition:background .15s,border-color .15s,transform .15s;
+    }
+    .product-card:hover{
+      background:var(--surface-hover);
+      border-color:var(--accent);
+      transform:translateY(-2px);
+    }
+    .product-icon{
+      width:48px;
+      height:48px;
+      border-radius:10px;
+      background:var(--accent);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-shrink:0;
+      font-size:1.5rem;
+    }
+    .product-info{
+      flex:1;
+      min-width:0;
+    }
+    .product-name{
+      font-size:1.05rem;
+      font-weight:600;
+    }
+    .product-desc{
+      margin-top:.25rem;
+      font-size:.82rem;
+      color:var(--text-sub);
+      line-height:1.4;
+    }
+    .product-links{
+      display:flex;
+      gap:.5rem;
+      margin-top:.5rem;
+      flex-wrap:wrap;
+    }
+    .product-links a{
+      font-size:.75rem;
+      color:var(--accent-light);
+      text-decoration:none;
+      padding:.2rem .6rem;
+      border:1px solid var(--border);
+      border-radius:6px;
+      transition:border-color .15s,background .15s;
+    }
+    .product-links a:hover{
+      border-color:var(--accent);
+      background:rgba(108,99,255,.1);
+    }
+    .arrow{
+      color:var(--text-sub);
+      font-size:1.1rem;
+      flex-shrink:0;
+      transition:color .15s;
+    }
+    .product-card:hover .arrow{
+      color:var(--accent-light);
+    }
+
+    /* ── Footer ── */
+    footer{
+      margin-top:auto;
+      text-align:center;
+      padding:2rem 1rem;
+      color:var(--text-sub);
+      font-size:.78rem;
+      border-top:1px solid var(--border);
+    }
+
+    /* ── Responsive ── */
+    @media(max-width:480px){
+      header{padding:2.5rem 1rem 1.5rem}
+      .product-card{padding:1rem 1.1rem;gap:1rem}
+      .product-icon{width:40px;height:40px;font-size:1.25rem}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>S.Iwakiri</h1>
+  <p>Products &amp; Services</p>
+</header>
+
+<main class="products">
+
+  <!-- LoopTrainer -->
+  <div class="product-card" onclick="void(0)">
+    <div class="product-icon">&#9654;</div>
+    <div class="product-info">
+      <div class="product-name">LoopTrainer</div>
+      <div class="product-desc">動画学習・繰り返し視聴に特化した軽量動画プレーヤー（Lite / Standard / Pro）</div>
+      <div class="product-links">
+        <a href="./loop-trainer/README.md">README</a>
+        <a href="./loop-trainer/terms.md">利用規約</a>
+        <a href="https://siwakiri.booth.pm/items/7812303" target="_blank" rel="noopener">BOOTH</a>
+      </div>
+    </div>
+    <span class="arrow">&#8250;</span>
+  </div>
+
+  <!-- 今後追加するサービスのテンプレート（コメントアウト）
+  <div class="product-card" onclick="void(0)">
+    <div class="product-icon">&#9733;</div>
+    <div class="product-info">
+      <div class="product-name">New Product</div>
+      <div class="product-desc">説明文をここに</div>
+      <div class="product-links">
+        <a href="./new-product/README.md">README</a>
+      </div>
+    </div>
+    <span class="arrow">&#8250;</span>
+  </div>
+  -->
+
+</main>
+
+<footer>
+  &copy; 2026 S.Iwakiri. All rights reserved.
+</footer>
+
+</body>
+</html>
