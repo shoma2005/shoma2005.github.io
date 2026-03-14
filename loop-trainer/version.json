@@ -1,0 +1,29 @@
+{
+  "paid": {
+    "version": "1.0.3",
+    "release_date": "2025-01-15",
+    "download_url": "https://siwakiri.booth.pm/items/7812303",
+    "release_notes": {
+      "ja": "Pro版リリース対応",
+      "en": "Pro version release update"
+    }
+  },
+  "pro": {
+    "version": "1.0.0",
+    "release_date": "2026-02-23",
+    "download_url": "https://siwakiri.booth.pm/items/7812303",
+    "release_notes": {
+      "ja": "Pro版初回リリース",
+      "en": "Pro version initial release"
+    }
+  },
+  "free": {
+    "version": "1.0.0",
+    "release_date": "2025-01-17",
+    "download_url": "https://siwakiri.booth.pm/items/7812303",
+    "release_notes": {
+      "ja": "Lite版初回リリース",
+      "en": "Lite version initial release"
+    }
+  }
+}
