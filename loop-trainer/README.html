@@ -142,6 +142,46 @@
       text-align:center;
     }
 
+    /* ── Hero / CTA ── */
+    .hero-copy{
+      font-size:1.35rem;
+      font-weight:700;
+      line-height:1.55;
+      margin:.75rem 0 1rem;
+    }
+    .editions{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:.75rem;
+      margin:1.25rem 0 .75rem;
+    }
+    .edition{
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:10px;
+      padding:.9rem 1rem;
+      text-align:center;
+    }
+    .edition.recommended{border-color:var(--accent);background:#1e1c38}
+    .edition .name{font-weight:600;font-size:1rem}
+    .edition .price{font-size:1.4rem;font-weight:700;margin:.2rem 0}
+    .edition .note{font-size:.78rem;color:var(--text-sub)}
+    .edition .badge{display:inline-block;font-size:.7rem;background:var(--accent);color:#fff;border-radius:999px;padding:.1rem .6rem;margin-bottom:.3rem}
+    .cta{
+      display:inline-block;
+      background:var(--accent);
+      color:#fff;
+      font-weight:600;
+      text-decoration:none;
+      padding:.75rem 1.6rem;
+      border-radius:10px;
+      transition:background .15s,transform .15s;
+    }
+    .cta:hover{background:var(--accent-light);transform:translateY(-1px)}
+    .cta-row{margin:.5rem 0 1.5rem}
+    .cta-note{font-size:.8rem;color:var(--text-sub);margin-left:.75rem}
+    th small{display:block;font-weight:400;color:var(--text-sub);font-size:.75rem}
+
     /* ── Footer ── */
     footer{
       text-align:center;
@@ -152,6 +192,8 @@
     }
 
     @media(max-width:600px){
+      .editions{grid-template-columns:1fr}
+      .cta-note{display:block;margin:.5rem 0 0}
       .container{padding:1.5rem 1rem 3rem}
       h1{font-size:1.5rem}
       table{font-size:.8rem}
@@ -166,14 +208,22 @@
 <p class="breadcrumb"><a href="../">S.Iwakiri</a> &rsaquo; LoopTrainer</p>
 
 <h1>LoopTrainer</h1>
-<p class="subtitle">動画学習・繰り返し視聴に特化した軽量動画プレーヤーです。<br><strong>Lite</strong> / <strong>Standard</strong> / <strong>Pro</strong> の3エディションがあります。</p>
+<p class="hero-copy">何度も巻き戻すのは、今日で終わりにしませんか？<br>AキーとBキー、2回押すだけで、その区間だけを何度でも。<br>速度も区間も「動画ごと」に記憶します。</p>
+<p class="subtitle">動画学習・繰り返し視聴に特化した軽量動画プレーヤーです（Windows 10 / 11）。<br><strong>Lite（無料）</strong> / <strong>Standard</strong> / <strong>Pro</strong> の3エディションがあります。</p>
+
+<div class="editions">
+  <div class="edition"><div class="name">Lite</div><div class="price">無料</div><div class="note">ABループ・速度変更を試す</div></div>
+  <div class="edition recommended"><div class="badge">おすすめ</div><div class="name">Standard</div><div class="price">¥1,280</div><div class="note">設定を動画ごとに記憶</div></div>
+  <div class="edition"><div class="name">Pro</div><div class="price">¥2,980</div><div class="note">コマ送り・ループ保存・切り出し</div></div>
+</div>
+<p class="cta-row"><a class="cta" href="https://siwakiri.booth.pm/items/7812303" target="_blank" rel="noopener">BOOTH で購入 / ダウンロード</a><span class="cta-note">買い切り・サブスクなし・アカウント登録不要</span></p>
 
 <!-- ═══════════════════════════════════ -->
 <h2>エディション比較</h2>
 <h3>機能一覧</h3>
 <table>
   <thead>
-    <tr><th>機能</th><th>Lite</th><th>Standard</th><th>Pro</th></tr>
+    <tr><th>機能</th><th>Lite<small>無料</small></th><th>Standard<small>¥1,280 ・ おすすめ</small></th><th>Pro<small>¥2,980</small></th></tr>
   </thead>
   <tbody>
     <tr><td><strong>動画再生</strong> (MP4/MKV/AVI/MOV/WMV/FLV)</td><td>&#10003;</td><td>&#10003;</td><td>&#10003;</td></tr>
@@ -213,6 +263,9 @@
   <li>インストーラーを実行（管理者権限は不要）</li>
   <li>インストール時に「動画ファイルをLoopTrainerに関連付ける」をチェックすると、動画ファイルをダブルクリックで開けるようになります</li>
 </ol>
+<blockquote>
+  <strong>SmartScreen の警告について</strong>: 本ソフトはコード署名を行っていないため、インストーラー実行時に「Windows によって PC が保護されました」と表示される場合があります。「詳細情報」→「実行」で続行できます。
+</blockquote>
 
 <!-- ═══════════════════════════════════ -->
 <h2>使い方</h2>
@@ -400,6 +453,14 @@
   <div class="ts-q">全画面表示が解除できない</div>
   <div class="ts-a">F11キーを押すか、マウスを画面上部に移動して解除ボタンをクリックしてください。</div>
 </div>
+<div class="ts-item">
+  <div class="ts-q">インストーラー実行時に「Windows によって PC が保護されました」と出る</div>
+  <div class="ts-a">コード署名を行っていないため SmartScreen の警告が表示されます。「詳細情報」→「実行」で続行してください。</div>
+</div>
+<div class="ts-item">
+  <div class="ts-q">ウイルス対策ソフトが警告を出す・ファイルが削除される</div>
+  <div class="ts-a">PyInstaller 製アプリは誤検知されることがあります。ウイルス対策ソフトの除外設定にインストール先フォルダを追加するか、お問い合わせください。</div>
+</div>
 
 <!-- ═══════════════════════════════════ -->
 <h2>ライセンス</h2>
@@ -419,6 +480,28 @@
 
 <!-- ═══════════════════════════════════ -->
 <h2>バージョン履歴</h2>
+
+<div class="version-block">
+  <h3>v1.1.0 全エディション (2026.10.14)</h3>
+  <ul>
+    <li>ABループを解除しても次回開くと復活する不具合を修正（Standard / Pro）</li>
+    <li>音量が130%で頭打ちになる不具合を修正（150%まで有効）</li>
+    <li>シークバーをクリックした位置へシークできるように</li>
+    <li>B地点 → A地点の順に設定すると再生が止まる不具合を修正（自動で入れ替え）</li>
+    <li>プレイリストを並べ替えた後に「次の動画」と再生中ハイライトがずれる不具合を修正</li>
+    <li>プレイリストの動画の長さが配布版で表示されない不具合を修正</li>
+    <li>サムネイルのキャッシュが毎回作り直され一時ファイルが増え続ける不具合を修正</li>
+    <li>サムネイル表示中にプレイリストを閉じて開き直すと落ちることがある不具合を修正</li>
+    <li>Program Files 配下にインストールすると起動できない不具合を修正</li>
+    <li>「開く」のファイル種別に MOV / WMV / FLV を追加</li>
+    <li>英語表示時の OSD（音量・回転・速度）を翻訳</li>
+    <li>Pro: 「ファイル情報」が配布版で取得できない不具合を修正</li>
+    <li>Pro: 視聴統計の累計時間が実際より短く記録される不具合を修正、累計時間列を数値順でソート</li>
+    <li>Pro: シャッフル再生中に再生中の動画を削除するとエラーになる不具合を修正</li>
+    <li>Pro: M3U 読み込みで相対パスに対応</li>
+    <li>Pro: クリップ書き出しの多重起動を防止</li>
+  </ul>
+</div>
 
 <div class="version-block">
   <h3>v1.0.0 Pro (2026.03)</h3>
@@ -475,6 +558,11 @@
     <li>制限: プレイリスト5本まで、保存1件まで、速度0.75x〜、動画ごとの設定保存なし</li>
   </ul>
 </div>
+
+<!-- ═══════════════════════════════════ -->
+<h2>購入・ダウンロード</h2>
+<p>Lite（無料）/ Standard ¥1,280 / Pro ¥2,980。いずれも買い切りで、サブスクやアカウント登録はありません。</p>
+<p class="cta-row"><a class="cta" href="https://siwakiri.booth.pm/items/7812303" target="_blank" rel="noopener">BOOTH で購入 / ダウンロード</a><span class="cta-note">迷ったら Standard がおすすめです</span></p>
 
 </div><!-- /.container -->
 

@@ -1,29 +1,29 @@
 {
   "paid": {
-    "version": "1.0.3",
-    "release_date": "2025-01-15",
+    "version": "1.1.0",
+    "release_date": "2026-10-14",
     "download_url": "https://siwakiri.booth.pm/items/7812303",
     "release_notes": {
-      "ja": "Pro版リリース対応",
-      "en": "Pro version release update"
+      "ja": "不具合修正: ABループ解除が保存されない / 音量が130%で頭打ち / シークバークリックで移動できない / 動画の長さが表示されない ほか安定性向上",
+      "en": "Bug fixes: AB loop clear not saved, volume capped at 130%, seek bar click, duration display, and stability improvements"
     }
   },
   "pro": {
-    "version": "1.0.0",
-    "release_date": "2026-02-23",
+    "version": "1.1.0",
+    "release_date": "2026-10-14",
     "download_url": "https://siwakiri.booth.pm/items/7812303",
     "release_notes": {
-      "ja": "Pro版初回リリース",
-      "en": "Pro version initial release"
+      "ja": "不具合修正: ファイル情報が取得できない / 視聴統計の時間が短く記録される / ABループ解除が保存されない / 音量が130%で頭打ち / シークバークリック ほか安定性向上",
+      "en": "Bug fixes: file info unavailable, watch time under-counted, AB loop clear not saved, volume capped at 130%, seek bar click, and stability improvements"
     }
   },
   "free": {
-    "version": "1.0.0",
-    "release_date": "2025-01-17",
+    "version": "1.1.0",
+    "release_date": "2026-10-14",
     "download_url": "https://siwakiri.booth.pm/items/7812303",
     "release_notes": {
-      "ja": "Lite版初回リリース",
-      "en": "Lite version initial release"
+      "ja": "不具合修正: 音量が130%で頭打ち / シークバークリックで移動できない / 動画の長さが表示されない / サムネイル表示の安定性向上",
+      "en": "Bug fixes: volume capped at 130%, seek bar click, duration display, and thumbnail stability improvements"
     }
   }
 }
