@@ -1,29 +1,30 @@
 {
-  "paid": {
-    "version": "1.1.0",
-    "release_date": "2026-10-14",
+  "purchase_url": "https://siwakiri.booth.pm/items/7812303",
+  "free": {
+    "version": "1.2.0",
+    "release_date": "2026-10-20",
     "download_url": "https://siwakiri.booth.pm/items/7812303",
     "release_notes": {
-      "ja": "不具合修正: ABループ解除が保存されない / 音量が130%で頭打ち / シークバークリックで移動できない / 動画の長さが表示されない ほか安定性向上",
-      "en": "Bug fixes: AB loop clear not saved, volume capped at 130%, seek bar click, duration display, and stability improvements"
+      "ja": "Lite は「無料版」になりました。再生位置を動画ごとに記憶、開いたときに復元内容を表示。向き・速度・ループ区間も10本まで記憶。コマ送り・字幕・0.05〜10x の速度も使えます",
+      "en": "Lite is now the free edition. Remembers playback position per video and shows what was restored. Rotation, speed and loop sections are remembered for up to 10 videos. Frame step, subtitles and 0.05-10x speed are now included"
     }
   },
   "pro": {
-    "version": "1.1.0",
-    "release_date": "2026-10-14",
+    "version": "1.2.0",
+    "release_date": "2026-10-20",
     "download_url": "https://siwakiri.booth.pm/items/7812303",
     "release_notes": {
-      "ja": "不具合修正: ファイル情報が取得できない / 視聴統計の時間が短く記録される / ABループ解除が保存されない / 音量が130%で頭打ち / シークバークリック ほか安定性向上",
-      "en": "Bug fixes: file info unavailable, watch time under-counted, AB loop clear not saved, volume capped at 130%, seek bar click, and stability improvements"
+      "ja": "再生位置を動画ごとに記憶、開いたときに復元内容を表示。設定の保存場所を共通化（旧バージョンの設定は自動で引き継ぎ）。無料版 / 有料版の2本に再編",
+      "en": "Remembers playback position per video and shows what was restored. Settings now live in one shared location (older settings are imported automatically). Editions reorganized into free / paid"
     }
   },
-  "free": {
-    "version": "1.1.0",
-    "release_date": "2026-10-14",
+  "paid": {
+    "version": "1.2.0",
+    "release_date": "2026-10-20",
     "download_url": "https://siwakiri.booth.pm/items/7812303",
     "release_notes": {
-      "ja": "不具合修正: 音量が130%で頭打ち / シークバークリックで移動できない / 動画の長さが表示されない / サムネイル表示の安定性向上",
-      "en": "Bug fixes: volume capped at 130%, seek bar click, duration display, and thumbnail stability improvements"
+      "ja": "Standard は有料版（LoopTrainer Pro）に統合されました。再生位置の記憶、復元内容の表示、コマ送り・字幕・クリップ切り出しなど Pro の全機能が使えます。設定は自動で引き継がれます",
+      "en": "Standard has been merged into the paid edition (LoopTrainer Pro): playback position memory, restore notice, frame step, subtitles, clip export and all other Pro features. Your settings are carried over automatically"
     }
   }
 }
